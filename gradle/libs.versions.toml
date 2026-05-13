@@ -34,6 +34,8 @@ paging = "3.4.1"
 collection = "1.5.0"
 swiperefreshlayout = "1.2.0"
 splashscreen = "1.2.0"
+compose = "1.8.0"
+paging-compose = "3.2.0"
 
 [libraries]
 androidx-activity = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity" }
@@ -78,6 +80,11 @@ androidx-profileinstaller = { group = "androidx.profileinstaller", name = "profi
 androidx-paging = { group = "androidx.paging", name = "paging-runtime-ktx", version.ref = "paging" }
 androidx-collection = { group = "androidx.collection", name = "collection", version.ref = "collection" }
 androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose"}
+androidx-compose-runtime-livedata = { group = "androidx.compose.runtime", name = "runtime-livedata", version.ref = "compose"}
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "compose"}
+androidx-paging-compose = { group = "androidx.paging", name = "paging-compose", version.ref = "paging-compose"}
+androidx-compose-material = { group = "androidx.compose.material", name = "material", version.ref = "compose"}
 
 [plugins]
 androidTest = { id = "com.android.test", version.ref = "gradle" }
@@ -87,3 +94,4 @@ androidx-navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin", ver
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

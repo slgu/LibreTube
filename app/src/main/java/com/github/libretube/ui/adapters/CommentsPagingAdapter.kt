@@ -8,7 +8,6 @@ import androidx.core.text.method.LinkMovementMethodCompat
 import androidx.core.text.parseAsHtml
 import androidx.core.view.isVisible
 import androidx.core.view.updateLayoutParams
-import androidx.core.view.updatePadding
 import androidx.paging.PagingDataAdapter
 import com.github.libretube.R
 import com.github.libretube.api.obj.Comment

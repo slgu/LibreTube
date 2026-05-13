@@ -37,6 +37,14 @@
             app:key="search_suggestions"
             app:title="@string/show_search_suggestions" />
 
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:icon="@drawable/ic_suggestions"
+            app:key="enable_compose_migration"
+            app:title="@string/enable_compose_migration" />
+
+
         <SwitchPreferenceCompat
             android:defaultValue="true"
             android:icon="@drawable/ic_list"

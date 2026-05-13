@@ -480,6 +480,7 @@
     <string name="import_format_list_of_urls">List of URLs or video IDs</string>
     <string name="home_tab_content">Home tab content</string>
     <string name="show_search_suggestions">Show search suggestions</string>
+    <string name="enable_compose_migration">Enable Compose Migration</string>
     <string name="audio_track_format">%1$s - %2$s</string>
     <string name="unknown_audio_language">Unknown audio language</string>
     <string name="unknown_audio_track_type">Unknown audio track type</string>

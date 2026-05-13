@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.androidx.navigation.safeargs)
     alias(libs.plugins.baselineprofile)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.compose.compiler)
 }
 
 /*
@@ -102,6 +103,7 @@ android {
 
     buildFeatures {
         buildConfig = true
+        compose = true
         resValues = true
     }
 
@@ -160,9 +162,16 @@ dependencies {
     implementation(libs.kotlinx.datetime)
     implementation(libs.converter.kotlinx.serialization)
 
+    // compose
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.runtime.livedata)
+    implementation(libs.androidx.compose.foundation)
+    implementation(libs.androidx.paging.compose)
+    implementation(libs.androidx.compose.material)
+    implementation("io.coil-kt.coil3:coil-compose:3.0.0")
+    implementation("androidx.navigation:navigation-compose:2.8.0")
     /* NewPipe Extractor */
     implementation(libs.newpipeextractor)
-
 
     /* Coil */
     coreLibraryDesugaring(libs.desugaring)

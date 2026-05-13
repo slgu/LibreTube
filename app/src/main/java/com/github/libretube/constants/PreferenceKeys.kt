@@ -33,6 +33,8 @@ object PreferenceKeys {
     const val HOME_TAB_CONTENT = "home_tab_content"
     const val SEARCH_SUGGESTIONS = "search_suggestions"
 
+    const val ENABLE_COMPOSE_MIGRATION = "enable_compose_migration"
+
     // Instance
     const val FETCH_INSTANCE = "selectInstance"
     const val AUTH_INSTANCE = "selectAuthInstance"

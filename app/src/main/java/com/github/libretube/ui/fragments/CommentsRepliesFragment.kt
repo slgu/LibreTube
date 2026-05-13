@@ -1,6 +1,7 @@
 package com.github.libretube.ui.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.core.view.isGone
@@ -25,6 +26,9 @@ import com.github.libretube.ui.adapters.CommentsPagingAdapter
 import com.github.libretube.ui.models.CommentRepliesViewModel
 import com.github.libretube.ui.models.CommentsViewModel
 import com.github.libretube.ui.sheets.CommentsSheet
+
+private const val TAG = "CommentsRepliesFragment"
+
 
 class CommentsRepliesFragment : Fragment(R.layout.fragment_comments) {
 
@@ -61,12 +65,12 @@ class CommentsRepliesFragment : Fragment(R.layout.fragment_comments) {
             "${getString(R.string.replies)} (${requireArguments().parcelable<Comment>(IntentData.comment)!!.replyCount.formatShort()})"
         )
 
-        binding.commentsRV.updatePadding(top = 0)
+        binding.commentsRV2.updatePadding(top = 0)
 
         val layoutManager = LinearLayoutManager(context)
-        binding.commentsRV.layoutManager = layoutManager
+        binding.commentsRV2.layoutManager = layoutManager
 
-        binding.commentsRV.adapter = repliesAdapter
+        binding.commentsRV2.adapter = repliesAdapter
 
         commentsSheet?.binding?.btnScrollToTop?.setOnClickListener {
             // scroll back to the top / first comment
@@ -76,7 +80,7 @@ class CommentsRepliesFragment : Fragment(R.layout.fragment_comments) {
             sharedModel.setRepliesPosition(POSITION_START)
         }
 
-        binding.commentsRV.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+        binding.commentsRV2.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 if (newState != RecyclerView.SCROLL_STATE_IDLE) return
 
