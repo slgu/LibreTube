@@ -327,15 +327,9 @@ fun Replies(
         state.loadState.refresh is LoadState.NotLoading
                 && state.itemCount > 0
 
-    // some debug logs
-    SideEffect { Log.d("xxxx", "recompose") }
     LaunchedEffect(Unit) {
         snapshotFlow { state.loadState }
             .collect { loadState ->
-                // no-op
-                Log.d("xxxx", "refresh state ${state.loadState.refresh} cnt: ${state.itemCount}")
-                Log.d("xxxx", "append state ${state.loadState.append} cnt: ${state.itemCount}")
-                Log.d("xxxx", "prepend state ${state.loadState.prepend} cnt: ${state.itemCount}")
             }
     }
 
